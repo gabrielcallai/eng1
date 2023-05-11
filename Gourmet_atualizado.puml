@@ -9,19 +9,22 @@ actor AnalistaDeQualidade as aq
 actor Vendedor as vd
 actor GerenteDeVendas as gv
 
+rectangle "SistemaDeliciasGourmet"{
 usecase "Adquirir materiais necessários" as amn
 usecase "Garantir a qualidade dos produtos" as gqdp
 usecase "Gerenciar o armazenamento dos materiais" as gadm
 usecase "Verificar se está tudo em conformidade com os pedidos" as vcp
+usecase "Entrega a Quantidade certa" as eqc
 usecase "Coordena a utilização dos ingredientes materiais no processo de fabricação" as cuimpf
-usecase "Entrega e Quantidade certa" as eqc
 usecase "Otimizar a utilização dos materiais" as oudm
 usecase "Monitora o processo de produção" as mpdp
 usecase "Garantir que a produção esteja em conformidade com as normas de segurança alimentar" as gpec
-usecase "Distribui os produtos" as dop
-usecase "Demanda do mercado" as ddm
 usecase "Montar equipe para distruibuir as vendas" as dv
 usecase "Controlar as vendas" as cav
+usecase "Distribui os produtos" as dop
+usecase "Demanda do mercado" as ddm
+}
+
 gc -- amn
 gc -- gqdp
 se -- gadm
@@ -37,5 +40,6 @@ vd -- ddm
 gv -- vd
 gv -- cav
 gv -- dv
+gc -- se
 
 @endluml
