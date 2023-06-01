@@ -1,0 +1,47 @@
+@startuml
+
+left to right direction
+
+  actor Coordenador as coo 
+  actor Professor as profe
+  actor Aluno as alu
+  actor Reitor as rei 
+  actor Funcionário as fun
+  actor Faxineiro as fax
+  actor Vigilante as vig 
+  actor Financeiro as fin 
+
+  usecase "Ministrar Aula" as UC1  
+  usecase "Orientar Matrícula" as UC3
+  usecase "Administrar Curso" as UC4
+  usecase "Administrar Universidade" as UC5
+  usecase "Representar Universidade" as UC6
+  usecase "Assistir Aula" as UC7
+  usecase "Prestar Serviço" as UC11
+  usecase "Atender Universidade" as UC10 
+  usecase "Gerenciar Receitas e Despesas" as UC9
+  usecase "Pagar" as UC8
+  usecase "Receber" as UC2 
+
+profe -- UC1 
+profe -- UC2
+coo -- UC3
+coo -- UC4
+coo --|> profe  
+rei --|> profe 
+rei -- UC5
+rei -- UC6 
+(UC7) .> (UC1) : <<inclui>> 
+UC7 -- alu 
+alu -- UC8
+UC8 --|> UC9 
+UC2 --|> UC9 
+UC9 -- fin
+UC10 --|> UC11
+UC11  -- fun 
+vig --|> fun
+fax --|> fun 
+fin --|> fun 
+fun -- UC2 
+
+@enduml
