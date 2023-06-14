@@ -1,7 +1,6 @@
 # engenhariaI2023
 <h1 align="center"> Delícias Gourmet </h1>
 
-![Símbolo G em formato de donault doce](https://user-images.githubusercontent.com/126122474/235366996-9ede13c2-58f5-41b7-8c18-74ae476ba5c1.jpg)
 ![Símbolo de adição em preto com fundo branco](https://w7.pngwing.com/pngs/381/607/png-transparent-chef-s-uniform-restaurant-cuisine-recipe-nourriture.png)
 
 <p align="center">
